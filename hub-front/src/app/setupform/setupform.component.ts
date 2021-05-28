@@ -207,7 +207,7 @@ export class SetupformComponent implements OnInit {
 
         formData.append("excel", file);
 
-        const upload$ = this.http.post("http://localhost:5000/v1/upload-file", formData);
+        const upload$ = this.http.post("http://api:5000/v1/upload-file", formData);
 
         upload$.subscribe(file_contents => this.file_contents_local = file_contents);
 
